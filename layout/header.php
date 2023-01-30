@@ -21,7 +21,7 @@
 </head>
 
 <body>
-
+    <?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
     <!-- HEADER -->
     <header>
         <nav>
@@ -35,11 +35,11 @@
                 <div class="col-lg-6 offset-lg-1 mt-4">
                     <div class="nav-links">
                         <ul class="nav-list">
-                            <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a href="programma.php" class="nav-link">Programma</a></li>
-                            <li class="nav-item"><a href="tickets.php" class="nav-link">Tickets</a></li>
-                            <li class="nav-item"><a href="info.php" class="nav-link">Info</a></li>
-                            <li class="nav-item"><a href="contest.php" class="nav-link">Contest</a></li>
+                            <li class="nav-item <?= ($activePage == 'index') ? 'active' : '' ?>"><a href="index.php" class="nav-link">Home</a></li>
+                            <li class="nav-item <?= ($activePage == 'programma') ? 'active' : '' ?>"><a href="programma.php" class="nav-link">Programma</a></li>
+                            <li class="nav-item <?= ($activePage == 'tickets') ? 'active' : '' ?>"><a href="tickets.php" class="nav-link">Tickets</a></li>
+                            <li class="nav-item <?= ($activePage == 'info') ? 'active' : '' ?>"><a href="info.php" class="nav-link">Info</a></li>
+                            <li class="nav-item <?= ($activePage == 'contest') ? 'active' : '' ?>"><a href="contest.php" class="nav-link">Contest</a></li>
                         </ul>
                     </div>
                 </div>
