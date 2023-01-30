@@ -1,0 +1,494 @@
+
+/* IMPORT ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+/* COLOR BACKGROUND */
+:root{
+    /* --body-gradient: 45deg, #163791 25%, #c7006a 75%; */
+    --body-gradient: 45deg, #0F5036 0%, #0E4D70 50%, #590230 100%;
+}
+
+
+/* COMPONENTS / OVERALL STYLING */
+
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 64px;
+    padding: 20px 0;
+}
+
+h4{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: white;
+    background: linear-gradient(var(--body-gradient));
+    background-size: 200%;
+    background-position: center;
+    animation: background-gradient 15s ease infinite alternate;
+}
+
+@keyframes background-gradient{
+    0% {background-position: 0%;}
+    100% {background-position: 100%;}
+}
+
+nav{
+    padding: 2em 5vw;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.nav-brand img{
+    width: 100%;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list{
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    padding: 0;
+}
+
+.nav-socials{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-social a{
+    margin-left: -20px;
+}
+
+.nav-social a:hover,.nav-social a:focus{
+    color: whitesmoke;
+}
+
+.nav-item a:hover{
+    color: white;
+}
+
+.nav-item.active{
+    border-bottom: 5px solid white;
+}
+
+.nav-item:hover{
+    border-bottom: 5px solid white;
+    transition: all 100ms;
+}
+
+.menu{
+    display: none;
+}
+
+.menu i{
+    color: black;
+}
+
+footer{
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo{
+    width: 200px;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+
+.footer-social{
+    width: 200px;
+    margin: 1em;
+}
+
+.footer-socials{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.footer-socials .nav-social a{
+    margin-left: 0;
+}
+
+main{
+    padding: 0 5vw;
+}
+
+
+
+/* INDEX.HTML */
+
+.countdown-card{
+    border: 10px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-number{
+    font-size: 80px;
+    line-height: .5em;
+    padding-top: .5em;
+}
+
+.action{
+    margin-top: 4em;
+    background-color: white;
+    display: inline-block;
+    mix-blend-mode: screen;
+}
+
+.button a{
+    color: black;
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+section{
+    margin-top: 8em;
+}
+
+
+#artist-carousel{
+    margin-top: 8em;
+}
+
+#carousel{
+    height: 640px;
+    border: 10px solid white;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+}
+
+.carousel-text{
+    position: absolute;
+    height: 640px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-artist-name{
+    color: white;
+    text-decoration: none;
+    font-size: 80px;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.carousel-artist-date{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.info-kaart{
+    border: 10px solid white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-image:nth-child(2) {
+    border-top: 5px solid white;
+}
+.info-image:nth-child(1) {
+    border-bottom: 5px solid white;
+}
+
+.info-image img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-text{
+    padding: 1em;
+}
+
+.info-title{
+    text-transform: uppercase;
+    padding-bottom: .5em;
+}
+
+
+
+
+/* PROGRAMMA.HTML */
+
+.programma-links{
+    margin-top: -2em;
+    border-top: 5px solid white;
+    width: 25em;
+    padding-top: .5em;
+}
+
+.programma-list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.programma-list a:hover{
+    color: white;
+}
+
+.programma-item.active{
+    background-color: white;
+    mix-blend-mode: screen;
+}
+
+.programma-item.active a{
+    color: black;
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+#programma{
+    margin-top: 4em;
+}
+
+.kaart{
+    border: 10px solid white;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+
+.programma-title{
+    background-color: white;
+    display: inline-block;
+    padding: 0 5px;
+    mix-blend-mode: screen;
+}
+
+.programma-title h4{
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+
+
+/* TICKETS.HTML */
+
+#tickets{
+    margin-top: 2em;
+}
+
+#tickets a{
+    color: white;
+}
+
+#tickets a .kaart{
+    transition: all 500ms;
+}
+
+#tickets a:hover .kaart{
+    box-shadow:inset 0 0 0 1000px rgba(255, 0, 150, 0.3);
+    transition: all 500ms;
+}
+
+.tickets-title{
+    display: inline-block;
+    background: white;
+    transform: translate(0px, 333px);
+    mix-blend-mode: screen;
+}
+
+.tickets-title h4{
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+    padding: 0 5px;
+    margin: 0;
+}
+
+
+
+/* INFO.HTML */
+
+.info.festival{
+    margin-top: 2em
+}
+
+.info-block{
+    padding: 10px 0;
+}
+
+#festival-locatie{
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+}
+
+.formulier{
+    margin: 2em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+input{
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 1em;
+    padding: 5px 20px;
+}
+
+textarea{
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    padding: 5px 20px;
+}
+
+label{
+    margin-bottom: .5em;
+}
+
+.button-alt{
+    margin: 0;
+    color: white;
+    background: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0;
+    border: 5px solid white;
+    padding: .5em;
+    letter-spacing: .1em;
+}
+
+.button-alt:hover{
+    box-shadow: 2px 4px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* CONTEST.HTML */
+
+.contest-info{
+    margin-top: 2em;
+}
+
+.drone-image{
+    height: 100%;
+}
+
+.drone-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+
+/* SMALL SCREENS */
+
+@media screen and (max-width: 991px){
+
+    nav{
+        padding-top: 5vw;
+    }
+
+    .menu{
+        right: 5vw;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        mix-blend-mode: screen;
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    .nav-list{
+        background: linear-gradient(var(--body-gradient));
+        animation: background-gradient 15s ease infinite alternate;
+        background-size: 400%;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        padding: 1em;
+        position: fixed;
+        flex-direction: column;
+        z-index: 100;
+        border-bottom: 10px solid white;
+        transform: translateY(-100%);
+        transition: all 200ms;
+    }
+
+    .nav-list.active{
+        transform: translateY(0%);
+    }
+
+    .nav-item:hover{
+        border: none;
+    }
+
+    .nav-item.active{
+        border: none;
+    }
+
+    #call-to-action a{
+        font-size: 30px;
+    }
+
+    .programma-links{
+        width: 100%;
+    }
+
+    .programma-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+    }
+}
