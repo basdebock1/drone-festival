@@ -2,16 +2,7 @@
 
     <!-- MAIN -->
     <main>
-        <div class="programma-navigation">
-            <div class="programma-links">
-                <ul class="programma-list">
-                    <li class="programma-item"><a href="programma.html" class="nav-link">Overzicht</a></li>
-                    <li class="programma-item active"><a href="programma-vrijdag.html" class="nav-link">Vrijdag</a></li>
-                    <li class="programma-item"><a href="programma-zaterdag.html" class="nav-link">Zaterdag</a></li>
-                    <li class="programma-item"><a href="programma-droneshows.html" class="nav-link">Drone Shows</a></li>
-                </ul>
-            </div>
-        </div>
+        <?php include('./snippets/components/programma-menu.php') ?>
 
         <section id="programma">
             <div class="row g-3">
