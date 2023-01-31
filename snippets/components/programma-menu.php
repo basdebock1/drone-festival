@@ -1,4 +1,8 @@
-<?php $activeTab = basename($_SERVER['PHP_SELF'], ".php"); ?>
+<?php
+
+include('./config/app.php');
+
+?>
 
 <div class="programma-navigation">
     <div class="programma-links">

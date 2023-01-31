@@ -1,33 +1,27 @@
 <?php include('./layout/header.php') ?>
 
-    <!-- MAIN -->
-    <main>
-        <?php include('./snippets/components/programma-menu.php') ?>
+<!-- MAIN -->
+<main>
+    <?php include('./snippets/components/programma-menu.php') ?>
 
-        <section id="programma">
-            <div class="row g-3">
-                <div class="col-lg-4">
-                    <div class="kaart" style="background-image: url('assets/images/team\ lazer\ beam.jpg');">
-                        <div class="programma-title">
-                            <h4>Team Lazer BEAM</h4>
-                        </div>
-                        <div class="programma-text">
-                            <p>Vrijdag 23u00</p>
+    <section id="programma">
+        <div class="row g-3">
+            <?php foreach ($programmas as $show) : ?>
+                <?php if ($show[$type] == "lazer") : ?>
+                    <div class="col-lg-4">
+                        <div class="kaart" style="background-image: url('assets/images/<?= $show[$img] ?>');">
+                            <div class="programma-title">
+                                <h4><?= $show[$artist] ?></h4>
+                            </div>
+                            <div class="programma-text">
+                                <p><?= $show[$day] . ' ' . $show[$hour] ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="kaart" style="background-image: url('assets/images/drone\ lazer.jpg');">
-                        <div class="programma-title">
-                            <h4>Lights Out</h4>
-                        </div>
-                        <div class="programma-text">
-                            <p>zaterdag 22u00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    </section>
+</main>
 
-    <?php include('./layout/footer.php'); ?>
+<?php include('./layout/footer.php'); ?>
