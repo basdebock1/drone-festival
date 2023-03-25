@@ -4,8 +4,6 @@
 <main>
     <?php include('./snippets/components/programma-menu.php') ?>
 
-    <?php include('./snippets/programma-cards.php') ?>
-
     <section id="programma">
         <div class="row g-3">
             <?php foreach ($programmas as $show) { ?>
